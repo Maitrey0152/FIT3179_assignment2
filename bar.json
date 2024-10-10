@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"A bubble chart of restaurant types and their sizes","fontSize":24, "font":"Times New Roman"},
+    "width":700,
+    "height":400,
+
+    "data":{"url":"https://raw.githubusercontent.com/Maitrey0152/FIT3179_assignment2/refs/heads/main/filtered_cafe.csv"},
+    "layer":[{
+    "mark": {
+      "type": "circle",
+      "stroke": "black",
+      "strokeWidth": 1
+    },
+    "encoding": {
+
+      "y": {
+      "field": "industry_anzsic4_description",
+      "type": "nominal",
+      "title": "Restaurant Category",
+      "axis":{
+        "titleFontSize": 16
+      }
+    },
+    "x": {
+      "aggregate": "count",
+      "title": "Number of Restaurants",
+      "scale": {               
+        "type": "pow"
+      },
+      "axis":{
+        "titleFontSize": 16
+      }
+      
+    },"size":{
+      "aggregate": "sum",
+      "field": "number_of_seats",
+      "type": "quantitative",
+      "legend": {
+        "titleFontSize":16,
+        "title": "Total Seats",
+        "orient": "right",
+        "offset":50
+      }
+    },
+    "tooltip": [
+      {"field": "industry_anzsic4_description", "type": "nominal","title":"Industry type"},
+      {"field": "clue_small_area", "type": "nominal","title":"Area name"}
+    ]
+      }},
+      {"mark":{"type": "text",
+        "align": "left",
+        "dx": 220,
+        "dy": -50,
+        "fontSize": 12,
+        "fontWeight": "bold"},
+      "encoding": {
+        "text": {
+          "value": "Most Popular Category"
+        }
+      }
+      },
+      {"mark":{"type": "text",
+        "align": "left",
+        "dx": -350,
+        "dy": -150,
+        "fontSize": 12,
+        "fontWeight": "bold"},
+      "encoding": {
+        "text": {
+          "value": "Least Popular Category"
+        }
+      }
+      }
+    ]}
+  

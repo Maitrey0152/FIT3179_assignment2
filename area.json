@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stacked area chart showing how different categories of restaurants have changed over the years.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Maitrey0152/FIT3179_assignment2/refs/heads/main/cafes_extended.csv"
+  },
+  "width": 857,
+  "height": 300,
+  "layer":[{
+  "mark": {
+    "type": "area"
+  },
+  "transform": [
+    {
+      "filter":{ "field": "industry_anzsic4_description", "oneOf":["Cafes and Restaurants","Pubs, Taverns and Bars","Takeaway Food Services","Other Specialised Food Retailing"]}
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "census_year",
+      "type": "temporal",
+      "axis": {
+        "title": "Year",
+        "titleFontSize": 16
+      }
+    },
+    "y": {
+      "aggregate": "count",
+      "field": "trading_name",
+      "type": "quantitative",
+      "axis": {
+        "title": "Number of Restaurants",
+        "titleFontSize": 16
+      },
+      "stack": "zero"
+    },
+    "color": {
+      "field": "industry_anzsic4_description",
+      "type": "nominal",
+      "title": "Restaurant Category"
+    },
+    "tooltip": [
+      {"aggregate": "count", "field": "industry_anzsic4_description", "type": "quantitative", "title": "Number of Restaurants"}
+    ]
+  }
+    },
+  {
+    "mark": {"type":"text",
+    "align": "left",
+    "dx": -20,
+    "dy": 20,
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "text":"Cafes & Restaurants dominate all other restaurant categories"
+    }
+  }
+  ]
+}

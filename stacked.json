@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stacked bar chart representing selected restaurants in each district.",
+    "width":765,
+    "height":400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/Maitrey0152/FIT3179_assignment2/refs/heads/main/cafes.csv"
+    },
+    "title": {
+    "text": "Fast food restaurants in Melbourne",
+    "fontSize": 24,
+    "font": "Times New Roman"
+  },
+    "transform": [
+      {
+        "filter": {
+          "field": "trading_name",
+          "oneOf": ["KFC", "Hungry Jack's","KFC Carlton","McDonalds","Grill'd","Subway","Oporto","Guzman y Gomez"]
+        }
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "clue_small_area",
+        "type": "nominal",
+        "axis": {
+          "title": "Regions of Melbourne",
+          "titleFontSize": 16
+        }
+      },
+      "x": {
+        "aggregate": "count",
+        "field": "trading_name",
+        "type": "quantitative",
+        "axis": {
+          "title": "Number of Restaurants",
+          "titleFontSize": 16
+        }
+      },
+      "color": {
+        "field": "trading_name",
+        "type": "nominal",
+        "title": "Restaurant Name"
+      },
+      "tooltip": [
+      {
+        "field": "trading_name",
+        "type": "nominal",
+        "title": "Restaurant Name"
+      },
+      {
+        "aggregate": "count",
+        "field": "trading_name",
+        "type": "quantitative",
+        "title": "Number of Restaurants"
+      }
+    ]
+    }
+    
+  }
