@@ -4,6 +4,10 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Maitrey0152/FIT3179_assignment2/refs/heads/main/cafes_extended.csv"
   },
+  "title": {
+    "text":"Rise and fall of restaurant counts in Melbourne",
+    "fontSize": 20
+},
   "width": 857,
   "height": 300,
   "layer":[{
@@ -51,6 +55,7 @@
     "dy": 20,
     "fontSize": 14,
     "fontWeight": "bold",
+    "color":"white",
     "text":"Cafes & Restaurants dominate all other restaurant categories"
     }
   }

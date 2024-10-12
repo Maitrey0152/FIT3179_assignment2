@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Maitrey0152/FIT3179_assignment2/refs/heads/main/cafes_extended.csv"
+  },
+  "height":400,
+  "width":850,
+  "layer":[{
+  "title": {
+    "text": "Number of seats across Melbourne",
+    "fontSize": 20,
+    "font": "Arial"
+  },
+  "transform": [
+{
+  "filter":"datum.clue_small_area != 'West Melbourne (Industrial)' && datum.clue_small_area != 'Parkville'&& datum.clue_small_area != 'Southbank'&& datum.clue_small_area != 'South Yarra'&& datum.clue_small_area != 'Port Melbourne'&& datum.clue_small_area != 'West Melbourne (Residential)'"
+}
+
+  ],
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "census_year",
+      "type": "temporal",
+      "axis": {
+        "title": "Number of Restaurants",
+        "titleFontSize": 16
+      }
+    },
+    "y": {
+      "aggregate":"sum",
+      "field": "number_of_seats",
+      "type": "quantitative",
+      "axis": {
+        "title": "Number of Restaurants",
+        "titleFontSize": 16
+      }
+    },
+    "color": {
+      "field": "clue_small_area",
+      "type": "nominal",
+      "title": "Region"
+    }
+  }},
+  {
+    "mark": {"type":"text",
+    "align": "left",
+    "dx": -150,
+    "dy": -50,
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "color":"black",
+    "text":"The gap in seat numbers is less extreme then the gap in restaurant numbers"
+    }
+
+}]
+}

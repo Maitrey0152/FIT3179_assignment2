@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Map of central melbourne depicting average household income versus restaurants",
-    "fontSize": 24,
+    "fontSize": 20,
     "font": "Times New Roman"
   },
   "params": [
@@ -117,7 +117,7 @@
               "type": "quantitative",
               "scale": {"scheme": "blues", "type": "log"},
               "legend": {
-                "title": "Household income",
+                "title": "Median Income",
                 "titleFontSize": 18,
                 "labelFontSize": 14,
                 "format": "$,.0f"
@@ -128,7 +128,7 @@
               {
                 "field": "value",
                 "type": "nominal",
-                "title": "Household Income",
+                "title": "Median Weekly Income",
                 "format": "$,.0f"
               }
             ]
@@ -149,10 +149,7 @@
             "longitude": {"field": "longitude", "type": "quantitative"},
             "latitude": {"field": "latitude", "type": "quantitative"},
             "size": {"value": 10},
-            "color": {"value": "red"},
-            "tooltip": [
-              {"field": "trading_name", "type": "nominal", "title": "Name"}
-            ]
+            "color": {"value": "red"}
           }
         },{"data": {
             "url": "https://raw.githubusercontent.com/Maitrey0152/FIT3179_week10_homework/refs/heads/main/topojson/melbourne.topojson",

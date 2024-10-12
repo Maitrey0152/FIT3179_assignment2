@@ -8,8 +8,8 @@
     },
     "title": {
     "text": "Fast food restaurants in Melbourne",
-    "fontSize": 24,
-    "font": "Times New Roman"
+    "fontSize": 20,
+    "font": "Arial"
   },
     "transform": [
       {

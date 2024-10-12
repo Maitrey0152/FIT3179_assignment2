@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title":{"text":"A bubble chart of restaurant types and their sizes","fontSize":24, "font":"Times New Roman"},
+    "title":{"text":"Restaurant types and their sizes","fontSize":20, "font":"Arial"},
     "width":700,
     "height":400,
 

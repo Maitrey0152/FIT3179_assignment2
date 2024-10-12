@@ -15,7 +15,7 @@
   </head>
   
   <body>
-    <font style="font-size:30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><center><b><p>Food: A Reflection Of Melbourne</p></b></center></font>
+    <font style="font-size:40px; font-family: 'Arial Narrow Bold', sans-serif;"><center><b><p>Food: A Reflection Of Melbourne</p></b></center></font>
   </body>
   <body>
     
@@ -27,28 +27,38 @@
 
       <div id = "textdetails">
         <h2><center>An unexpected result</center></h2>
-        <p>The purpose of this visualisation is to try and find a relationship between the wealth of a neighbourhood and the 
+        <p>The purpose of this visualization is to try and find a relationship between the wealth of a neighbourhood and the 
           type of restaurants that are available in that region. <br><br> Here we face a few serious problems when analyszing our dataset.
           A reasonable assertion to make would be that areas with higher disposale income should have more restaurants, but here 
           Melbourne (3000) which has a relatively low weekly median income, contains most of the restaurants.
           <br><br>
-          This could be due to the number of restaurants tracking more closely with overall population instead of wealth. Let us dive deeper to see if we 
+          This could be due to the number of restaurants tracking more closely with overall population instead of wealth. Lets dive deeper to see if we 
           can find some other insights.
         </p>
       </div>
     <div id = "area"></div>
     <div id = "textdetails">
       <h2><center>A worrying trend</center></h2>
-      <p> Every single restaurant category has shrunk in the past few years, but how does it impact Melbourne overall? Are all parts of Melbourne affected equally?
+      <p> Every single restaurant category has shrunk in the past few years, but how does it impact melbourne overall? Are all parts of Melbourne affected equally?
         <br><br>
-        Now let's try to see a clearer picture of what the city looks like in 2022.
+        Now lets try to see a clearer picture of what the city looks like in 2022.
       </p>
     </div>
+    <div id = "line"></div>
+    <div id = "textdetails">
+      <h2><center> Causation vs Correlation </center></h2>
+        <p> Does Melbourne (CBD) really have the most number of restaurants or does it simply have a large number of very small 
+          restaurants compared to bigger restaurants in places further away from the city area. <br><br> To solve this problem
+          I try to find which region truly has the largest number of seats. <br><br> Melbourne (CBD) is still larger 
+        but the gap with other regions is now greatly reduced compared to looking at just the count of restaurants. </p>
+
+    </div>
+
     <div id = "bar"></div>
 
     <div id = "textdetails">
       <h2><center>Organizing the dataset</center></h2>
-        <p> The chart on the left shows us not just the number of restaurants, but also the number of seats
+        <p> The chart on the left allows us to see not just the number of restaurants, but also the number of seats
           they hold in total across each region.<br><br> This supports the hypothesis presented earlier with restaurant numbers tracking with overall footfall more than with income <br><br> The clear problem infront of us is that the Australian 
         beareau of statistics decided not to count Cafes and restaurants in separate categories which means that we might need to analyse this dataset differently.</p>
     </div>
@@ -56,12 +66,19 @@
     <div id = "textdetails">
       <h2><center>So what about fast food?</center></h2>
       <p> Fast food restaurants often focus on speed and affordability so does that mean there is a relationship between income and fast food
-        <br><br> Based on the graph on the right a wealthy region like Kensington has nowhere near the same number of fast food joints compared to Melbourne(CBD).
-        <br><br> This proves that there are definetly some other variables that are influencing where brands choose to set up shop.</p>
+        <br><br> Based on the graph on the right a wealthy region like Kensington has no where near the same number of fast food joints compared to a Melbourne(CBD)
+        <br><br> This shows that there are definetly some other variables that are influencing where brands choose to set up shop.</p>
     </div>
   </div>
-  <p> Primary Source for data on restaurants:<a href =  "https://discover.data.vic.gov.au/dataset/cafe-restaurant-bistro-seats">https://discover.data.vic.gov.au/dataset/cafe-restaurant-bistro-seats</a></p>
-  <p> Secondary Source for data on median incomes across Melbourne: <a href = "https://www.abs.gov.au/census/find-census-data/search-by-area">https://www.abs.gov.au/census/find-census-data/search-by-area</a></p>
+  <p> Data on restaurants including number of seats, latitude/longitude, category: 
+    <br> Source: www.data.vic.gov.au
+    <br> Using the latest available data from 2022
+    <br>Link: <a href =  "https://discover.data.vic.gov.au/dataset/cafe-restaurant-bistro-seats">https://discover.data.vic.gov.au/dataset/cafe-restaurant-bistro-seats</a></p>
+  <p> Secondary Source for data on median incomes across Melbourne: 
+    <br> Source: www.abs.gov.au
+    <br> Using the latest available data from 2021
+    <br> Link <a href = "https://www.abs.gov.au/census/find-census-data/search-by-area">https://www.abs.gov.au/census/find-census-data/search-by-area</a></p>
+  
   </body>
   
   </html>

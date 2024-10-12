@@ -18,3 +18,8 @@ vegaEmbed("#stacked",vs3).then(function(result){
 
 }).catch(console.error);
 
+var vs5 = "line.json";
+vegaEmbed("#line",vs5).then(function(result){
+
+}).catch(console.error);
+
