@@ -3,7 +3,7 @@
   "title": {
     "text": "Map of central melbourne depicting average household income versus restaurants",
     "fontSize": 20,
-    "font": "Times New Roman"
+    "font": "Arial"
   },
   "params": [
     {
